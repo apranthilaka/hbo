@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "sass": "^1.96.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass scss/app.scss:css/app.css",
+    "watch-css": "sass --watch scss/app.scss:css/app.css",
+    "serve": "browser-sync start --server --files '**/*.html, **/*.css' --no-notify --open"
+  }
+  
+}
