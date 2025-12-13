@@ -1,0 +1,21 @@
+.appContainer {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    /* allow children to manage scrolling within this cell */
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+
+    /* make the immediate content wrapper a column flex so title + cards
+       can stack and `.cards` can take the remaining space */
+    >div {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        height: 100%;
+    }
+
+
+
+}

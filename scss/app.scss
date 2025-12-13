@@ -1,10 +1,11 @@
-// @use 'variables';
-@use 'resetter';
-@use 'typography';
+@use 'variables';
+// @use 'resetter';
 @use 'base';
+@use 'typography';
 @use 'layout';
 @use 'topMenu';
 @use 'leftMenu';
-@use 'container';
-@use 'titleComponent';
+@use 'appContainer';
+@use 'dashboardComponents/titleComponent';
 @use 'dashboardComponents/cards';
+@use 'dashboardComponents/cardsTitle';

@@ -1,12 +1,43 @@
 @import '../variables';
 
 .cards {
-    overflow-x: auto;
+    /* allow only vertical scrolling inside the cards area and grow to fill
+         the remaining space in the flex column so we can scroll internally */
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+    flex: 1 1 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: auto;
     gap: 16px;
     padding: 16px;
+
+    /* make the scrollbar visible and easy to notice across browsers */
+    position: relative;
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+    /* Firefox */
+
+    &::-webkit-scrollbar {
+        width: 14px;
+        height: 14px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.18);
+        border-radius: 8px;
+        border: 3px solid transparent;
+        /* creates a gutter so thumb doesn't overlay content */
+        background-clip: padding-box;
+    }
+
+
 
     &_card {
         background-color: #fff;

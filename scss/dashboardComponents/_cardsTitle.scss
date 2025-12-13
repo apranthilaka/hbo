@@ -1,0 +1,13 @@
+.cardsTitle {
+    // border: 1px solid red;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_inputCollection {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+}

@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +13,15 @@
     --gap: 1rem;
     --radius: 12px;
     --pad: 24px;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
-        Arial;
-    color-scheme: light;
+    // --pico-font-size: 87.5%;
+
 }
 
 html,
 body {
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    font-family: 'Inter', sans-serif;
     color: #333;
     height: 100%;
     width: 100%;
@@ -28,10 +29,9 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Vertical center */
     min-height: 100vh;
-    /* Full viewport height */
-    // gap: 10%;
-    background-color: rgb(247 248 250);
+}
 
+.primaryButton {
+    @include primaryButton;
 }
