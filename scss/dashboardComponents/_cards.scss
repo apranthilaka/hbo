@@ -1,4 +1,8 @@
+@import '../variables';
+
 .cards {
+
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: auto;
@@ -16,9 +20,31 @@
         border: 1px solid rgb(226, 226, 226);
         border-radius: 8px;
 
-        &:hover {
-            // box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+    }
+
+    &_heading {
+        @include headingMedium;
+        margin-bottom: 12px;
+    }
+
+    &_icons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        grid-template-rows: auto;
+
+
+        div {
+            height: 40px;
+            border: 1px solid rgb(224, 224, 224);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0px 16px;
         }
     }
+
+
 
 }

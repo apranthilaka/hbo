@@ -1,0 +1,14 @@
+@mixin headingSmall {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@mixin headingMedium {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin headingLarge {
+    font-size: 24px;
+    font-weight: 700;
+}
