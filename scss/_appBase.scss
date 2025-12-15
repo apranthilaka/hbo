@@ -35,6 +35,25 @@ body {
     @include primaryButton;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     --pico-font-weight: 600;
+}
+
+select,
+input {
+    margin: 0;
+    max-height: 36px;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-right: 31px;
+    padding-left: 12px;
+    font-size: 13px;
+    width: 200px
 }

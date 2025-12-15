@@ -6,6 +6,16 @@
         <title>Holtara Back Office</title>
         <link
             rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+        />
+        <link
+            rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
         <link
@@ -16,15 +26,70 @@
     </head>
     <body>
         <div class="layout">
-            <div class="topMenu">Data Server</div>
+            <div class="topMenu">
+                <div class="left-content">
+                    <div>
+                        <div class="system-status">
+                            <div class="system-status__circle"></div>
+                            <div>Dev Server</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div>
+                        <select
+                            name="favorite-cuisine"
+                            aria-label="Select your favorite cuisine..."
+                            required
+                        >
+                            <option selected disabled value="">History</option>
+                            <option>Italian</option>
+                            <option>Japanese</option>
+                            <option>Indian</option>
+                            <option>Thai</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select
+                            name="favorite-cuisine"
+                            aria-label="Select your favorite cuisine..."
+                            required
+                        >
+                            <option selected disabled value="">
+                                IQ System
+                            </option>
+                            <option>Italian</option>
+                            <option>Japanese</option>
+                            <option>Indian</option>
+                            <option>Thai</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                    </div>
+                    <div class="user-name">
+                        <p>User Name</p>
+                        <div class="user-name__avatar">UN</div>
+                    </div>
+                </div>
+            </div>
             <div class="leftMenu">Left Menu</div>
             <div class="appContainer">
                 <div>
                     <div class="titleComponent">
-                        <div>
+                        <div class="titleComponent__left">
+                            <i class="ph-fill ph-squares-four"></i>
+
                             <h4>Dashboard</h4>
                         </div>
-                        <div>
+                        <div class="titleComponent__right">
                             <button class="primaryButton">Create User</button>
                         </div>
                     </div>
@@ -63,90 +128,9 @@
                         </div>
                     </div>
                     <div class="cardsContainer">
-                        <div class="card">
-                            <div class="card_heading">
-                                <div cardContainer></div>
-                                <h5>Card Title</h5>
-                            </div>
-                            <div class="card_links">
-                                <div>icon 1</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_heading">
-                                <div cardContainer></div>
-                                <h5>Card Title</h5>
-                            </div>
-                            <div class="card_links">
-                                <div>icon 1</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_heading">
-                                <div cardContainer></div>
-                                <h5>Card Title</h5>
-                            </div>
-                            <div class="card_links">
-                                <div>icon 1</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_heading">
-                                <div cardContainer></div>
-                                <h5>Card Title</h5>
-                            </div>
-                            <div class="card_links">
-                                <div>icon 1</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_heading">
-                                <div cardContainer></div>
-                                <h5>Card Title</h5>
-                            </div>
-                            <div class="card_links">
-                                <div>icon 1</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                                <div>icon 2</div>
-                                <div>icon 3</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                        <div class="card_heading">
-                            <div cardContainer></div>
-                            <h5>Card Title</h5>
-                        </div>
-                        <div class="card_links">
-                            <div>icon 1</div>
-                            <div>icon 2</div>
-                            <div>icon 3</div>
-                            <div>icon 2</div>
-                            <div>icon 3</div>
-                        </div>
-                    </div>
-
-
-
                         <div class="card card--gp">
                             <div class="card_heading">
-                                <div class="card_icon"> GP</div>
+                                <div class="card_icon">GP</div>
                                 <h5>Card Title</h5>
                             </div>
                             <div class="card_links">
@@ -160,7 +144,7 @@
 
                         <div class="card card--lp">
                             <div class="card_heading">
-                                <div class="card_icon"> LP</div>
+                                <div class="card_icon">LP</div>
                                 <h5>Card Title</h5>
                             </div>
                             <div class="card_links">
@@ -172,11 +156,462 @@
                             </div>
                         </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+                        <div class="card card--gp">
+                            <div class="card_heading">
+                                <div class="card_icon">GP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
 
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+                        <div class="card card--gp">
+                            <div class="card_heading">
+                                <div class="card_icon">GP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+                        <div class="card card--gp">
+                            <div class="card_heading">
+                                <div class="card_icon">GP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+                        <div class="card card--gp">
+                            <div class="card_heading">
+                                <div class="card_icon">GP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+                        <div class="card card--gp">
+                            <div class="card_heading">
+                                <div class="card_icon">GP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
+
+                        <div class="card card--lp">
+                            <div class="card_heading">
+                                <div class="card_icon">LP</div>
+                                <h5>Card Title</h5>
+                            </div>
+                            <div class="card_links">
+                                <div>icon 1</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                                <div>icon 2</div>
+                                <div>icon 3</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

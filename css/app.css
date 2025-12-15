@@ -44,8 +44,27 @@ body {
   background-color: #242424;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   --pico-font-weight: 600;
+}
+
+select,
+input {
+  margin: 0;
+  max-height: 36px;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 31px;
+  padding-left: 12px;
+  font-size: 13px;
+  width: 200px;
 }
 
 .layout {
@@ -61,8 +80,66 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: 1/2;
   grid-column: 2/3;
   border-bottom: 1px solid rgb(235, 235, 235);
-  height: 56px;
-  padding: 16px 24px;
+  height: auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.topMenu select,
+.topMenu input {
+  margin: 0;
+  border-radius: 1000PX;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.system-status {
+  height: 36px;
+  background-color: hsl(141, 84%, 93%);
+  color: hsl(142, 72%, 29%);
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-radius: 1000px;
+}
+.system-status__circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 1000px;
+  background-color: hsl(142, 71%, 45%);
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-left: 16px;
+}
+.user-name p {
+  margin: 0;
+}
+.user-name__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 1000px;
+  background-color: hsl(104, 50%, 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .leftMenu {
@@ -100,6 +177,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .titleComponent h4 {
   margin: 0;
+}
+.titleComponent__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.titleComponent__left i {
+  font-size: 20px;
+  padding-top: 2px;
+}
+.titleComponent__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .cardsTitle {
