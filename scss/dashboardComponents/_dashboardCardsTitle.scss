@@ -1,13 +1,23 @@
 .cardsTitle {
-    // border: 1px solid red;
-    padding: 16px 24px;
+    padding: 16px 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    h5 {
+        margin: 0;
+
+    }
 
     &_inputCollection {
         display: flex;
         flex-direction: row;
         gap: 16px;
+    }
+
+    input,
+    select {
+        margin: 0;
+
     }
 }
