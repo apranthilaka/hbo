@@ -44,8 +44,7 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid rgb(212, 212, 212);
-    padding: 0 16px;
-    padding-right: 4px;
+    padding: 0 12px;
     border-radius: 4px;
     gap: 16px;
     font-size: 14px;
@@ -57,11 +56,15 @@
     }
 
     &__value {
+        min-width: 50px;
         padding: 2px 8px;
         background-color: var(--value-bg-color);
         color: var(--value-text-color);
         border-radius: 4px;
         font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &--green {

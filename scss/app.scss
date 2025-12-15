@@ -1,13 +1,12 @@
-@use 'appVariables';
+@forward 'appVariables';
 // @use 'resetter';
 @use 'appBase';
-// @use 'typography';
+ @use 'appTypography';
 @use 'appLayout';
 @use 'appTopMenu';
 @use 'appLeftMenu';
 @use 'appContainer';
 @use 'appTitle';
-
 @use 'dashboardComponents/dashboardCardsTitle';
 @use 'dashboardComponents/dashboardCardsContainer';
 @use 'dashboardComponents/dashboardCard';

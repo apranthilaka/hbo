@@ -32,5 +32,11 @@
     }
 }
 
+
+.primaryButton {
+    @include primaryButton;
+}
+
+
 $app-border: #cacaca;
 $background-white: #ffffff;
