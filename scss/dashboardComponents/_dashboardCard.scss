@@ -1,4 +1,4 @@
-@use'../appVariables' as hbo;
+@use '../app-variables' as hbo;
 
 .card {
   --header-background-color: #ffffff;
@@ -23,16 +23,14 @@
     background-color: var(--header-background-color);
     transition: background-color .5s ease;
 
-    h5 {
+    h6 {
       margin: 0;
     }
   }
 
   &_icon {
-
     border: 1px solid hbo.$app-border;
     background-color: var(--icon-background-color);
-
     width: 32px;
     height: 32px;
     border-radius: 1000px;
@@ -41,6 +39,7 @@
     align-items: center;
     transition: background-color .5s ease;
     font-size: 13px;
+
 
   }
 
@@ -61,6 +60,12 @@
       flex-direction: column;
       padding: 0 16px;
       color: gray;
+      &:hover{
+        p{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
