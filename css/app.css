@@ -185,10 +185,45 @@ input {
 }
 
 .leftMenu {
-  border-right: 1px solid rgb(214, 214, 214);
   grid-column: 1/2;
   grid-row: 1/3;
   height: 100%;
+  background-color: hsl(158, 23%, 91%);
+}
+
+.logo {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding: 0 16px;
+}
+.logo i {
+  font-size: 20px;
+}
+
+.menu-items ul {
+  padding: 0 16px;
+  padding-top: 16px;
+}
+.menu-items li {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  margin: 0;
+  transition: background-color 0.5s ease;
+  border-radius: 4px;
+}
+.menu-items li:hover {
+  background-color: hsl(159, 22%, 77%);
+  cursor: pointer;
+}
+.menu-items li.current {
+  background-color: hsl(159, 22%, 77%);
 }
 
 .appContainer {
