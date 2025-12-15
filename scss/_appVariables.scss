@@ -15,14 +15,17 @@
 
 @mixin primaryButton {
     min-width: 115px;
-    height: 44px;
+    height: 36px;
     background-color: #000000;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 0px 16px;
     font-size: 14px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background-color: #242424;
@@ -30,4 +33,4 @@
 }
 
 $app-border: #cacaca;
-$background-white:#ffffff;
+$background-white: #ffffff;

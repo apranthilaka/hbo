@@ -9,15 +9,27 @@
 
     }
 
-    &_inputCollection {
+    &_left {
         display: flex;
         flex-direction: row;
         gap: 16px;
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+
     }
 
     input,
     select {
         margin: 0;
 
+    }
+
+    button {
+        margin: 0;
     }
 }

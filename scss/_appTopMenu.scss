@@ -1,3 +1,5 @@
+@use 'appVariables';
+
 .topMenu {
     grid-row: 1/2;
     grid-column: 2/3;
@@ -15,7 +17,7 @@
     }
 }
 
-.left-content {
+.left {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -40,13 +42,59 @@
     }
 }
 
-.right-content {
+.right {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    &__cfa {
+        margin-left: 16px;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1000px;
+        border: 1px solid appVariables.$app-border;
+        transition: img transform .3s ease;
+        overflow: hidden;
+
+
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        i {
+            font-size: 20px;
+
+        }
+
+        img {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            i {
+                display: none;
+            }
+
+            img {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 1000px;
+            }
+        }
+    }
 }
 
-.user-name {
+.user-details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,10 +110,13 @@
         width: 36px;
         height: 36px;
         border-radius: 1000px;
-        background-color: hsla(104, 50%, 85%, 1);
+        // background-color: hsla(104, 50%, 85%, 1);
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid gray;
+        border-radius: 1000px;
+        overflow: hidden;
 
     }
 }
