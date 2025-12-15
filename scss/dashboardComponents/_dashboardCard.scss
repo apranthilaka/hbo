@@ -1,0 +1,82 @@
+@use'../appVariables';
+
+.card {
+  --header-background-color: #ffffff;
+  --header-border-color: gray;
+  --icon-border-color: gray;
+  --icon-background-color: #e3e3e3;
+  border: 1px solid appVariables.$app-border;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  height: min-content;
+  overflow: hidden;
+  background-color: appVariables.$background-white;
+
+  &_heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-bottom: 1px solid appVariables.$app-border;
+    background-color: var(--header-background-color);
+    transition: background-color .5s ease;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  &_icon {
+
+    border: 1px solid appVariables.$app-border;
+    background-color: var(--icon-background-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s ease;
+
+  }
+
+  &_links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-rows: auto;
+    padding: 16px;
+
+    div {
+      height: 40px;
+      border: 1px solid rgb(224, 224, 224);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0 16px;
+    }
+  }
+}
+
+.card--gp {
+  --icon-border-color: #F1DC8E;
+  --icon-background-color: #FBF5DF;
+
+  :hover {
+    --header-background-color: #FBF5DF;
+    --header-border-color: #FBF5DF;
+
+  }
+}
+
+.card--lp {
+  --icon-border-color: #85F09C;
+  --icon-background-color: #DFFBE5;
+
+  :hover {
+    --header-background-color: #DFFBE5;
+    --header-border-color: #DFFBE5;
+  }
+}

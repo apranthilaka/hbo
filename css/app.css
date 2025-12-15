@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +11,7 @@
   --gap: 1rem;
   --radius: 12px;
   --pad: 24px;
+  --pico-font-size: 14px ;
 }
 
 html,
@@ -45,121 +44,8 @@ body {
   background-color: #242424;
 }
 
-/* Base setup */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Inter", sans-serif;
-  margin: 1.2em 0 0.5em;
-  line-height: 1.3;
-  color: #111;
-}
-
-h1 {
-  font-size: 2rem;
-  /* 28px */
-  font-weight: 700;
-  /* Bold */
-}
-
-h2 {
-  font-size: 1.714rem;
-  /* ~24px */
-  font-weight: 600;
-  /* Semi Bold */
-}
-
-h3 {
-  font-size: 1.429rem;
-  /* ~20px */
-  font-weight: 600;
-}
-
-h4 {
-  font-family: "Inter", sans-serif;
-  margin: 1.2em 0 0.5em;
-  line-height: 1.3;
-  font-size: 22.4px;
-  font-weight: 500;
-  letter-spacing: -0.448px;
-  color: #2d3347 #2d3347;
-}
-
-h5 {
-  font-size: 1.071rem;
-  /* ~15px */
-  font-weight: 500;
-  margin-top: 0;
-  margin: 0;
-}
-
-h6 {
-  font-size: 1rem;
-  /* 14px */
-  font-weight: 500;
-}
-
-/* Headings */
-p {
-  font-family: "Geist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  margin: 0.5em 0;
-  line-height: 1.6;
-  color: #2d3347;
-  margin: 0;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Lists */
-blockquote {
-  margin: 1em 0;
-  padding-left: 1em;
-  border-left: 4px solid #ccc;
-  color: #5a5d70;
-}
-
-/* Blockquotes */
-code {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-  background-color: #f8f9fa;
-  padding: 0.5em;
-  border-radius: 4px;
-}
-
-/* Code and Preformatted Text */
-hr {
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1.5em 0;
-}
-
-/* Horizontal Rule */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-li {
-  color: #5a5d70;
+h1, h2, h3, h4, h5, h6 {
+  --pico-font-weight: 600;
 }
 
 .layout {
@@ -174,7 +60,7 @@ li {
 .topMenu {
   grid-row: 1/2;
   grid-column: 2/3;
-  border-bottom: 1px solid rgb(214, 214, 214);
+  border-bottom: 1px solid rgb(235, 235, 235);
   height: 56px;
   padding: 16px 24px;
 }
@@ -187,6 +73,7 @@ li {
 }
 
 .appContainer {
+  background-color: #FAFAFA;
   grid-column: 2/3;
   grid-row: 2/3;
   /* allow children to manage scrolling within this cell */
@@ -211,8 +98,30 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+.titleComponent h4 {
+  margin: 0;
+}
 
-.cards {
+.cardsTitle {
+  padding: 16px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardsTitle h5 {
+  margin: 0;
+}
+.cardsTitle_inputCollection {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.cardsTitle input,
+.cardsTitle select {
+  margin: 0;
+}
+
+.cardsContainer {
   /* allow only vertical scrolling inside the cards area and grow to fill
        the remaining space in the flex column so we can scroll internally */
   overflow-y: auto;
@@ -221,7 +130,7 @@ li {
   flex: 1 1 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: auto;
+  grid-template-rows: min-content;
   gap: 16px;
   padding: 16px;
   /* make the scrollbar visible and easy to notice across browsers */
@@ -231,60 +140,90 @@ li {
   scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
   /* Firefox */
 }
-.cards::-webkit-scrollbar {
+.cardsContainer::-webkit-scrollbar {
   width: 14px;
   height: 14px;
 }
-.cards::-webkit-scrollbar-track {
+.cardsContainer::-webkit-scrollbar-track {
   background: transparent;
 }
-.cards::-webkit-scrollbar-thumb {
+.cardsContainer::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.18);
   border-radius: 8px;
   border: 3px solid transparent;
   /* creates a gutter so thumb doesn't overlay content */
   background-clip: padding-box;
 }
-.cards_card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+
+.card {
+  --header-background-color: #ffffff;
+  --header-border-color: gray;
+  --icon-border-color: gray;
+  --icon-background-color: #e3e3e3;
+  border: 1px solid #cacaca;
   border-radius: 8px;
-  padding: 16px;
   transition: box-shadow 0.3s ease;
-  min-height: 200px;
-  border: 1px solid rgb(226, 226, 226);
-  border-radius: 8px;
+  height: min-content;
+  overflow: hidden;
+  background-color: #ffffff;
 }
-.cards_heading {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 12px;
+.card_heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border-bottom: 1px solid #cacaca;
+  background-color: var(--header-background-color);
+  transition: background-color 0.5s ease;
 }
-.cards_icons {
+.card_heading h5 {
+  margin: 0;
+}
+.card_icon {
+  border: 1px solid #cacaca;
+  background-color: var(--icon-background-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+.card_links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   grid-template-rows: auto;
+  padding: 16px;
 }
-.cards_icons div {
+.card_links div {
   height: 40px;
   border: 1px solid rgb(224, 224, 224);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0px 16px;
+  padding: 0 16px;
 }
 
-.cardsTitle {
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.card--gp {
+  --icon-border-color: #F1DC8E;
+  --icon-background-color: #FBF5DF;
 }
-.cardsTitle_inputCollection {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+.card--gp :hover {
+  --header-background-color: #FBF5DF;
+  --header-border-color: #FBF5DF;
+}
+
+.card--lp {
+  --icon-border-color: #85F09C;
+  --icon-background-color: #DFFBE5;
+}
+.card--lp :hover {
+  --header-background-color: #DFFBE5;
+  --header-border-color: #DFFBE5;
 }
 
 /*# sourceMappingURL=app.css.map */
