@@ -811,8 +811,7 @@ li {
   gap: 8px;
 }
 .titleComponent__left i {
-  font-size: 20px;
-  padding-top: 3px;
+  font-size: 24px;
 }
 .titleComponent__right {
   display: flex;
@@ -903,7 +902,7 @@ li {
   min-height: 0;
   flex: 1 1 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: min-content;
   gap: 16px;
   padding: 16px;
@@ -974,17 +973,36 @@ li {
   grid-template-rows: auto;
   gap: 1px;
 }
-.card_links div {
+.card_links > div {
+  width: 100%;
   height: 40px;
   outline: 1px solid rgb(224, 224, 224);
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   padding: 0 16px;
   color: gray;
+  transition: background-color, font-size 0.5s ease;
 }
-.card_links div:hover p {
+.card_links > div > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+.card_links > div i.right-icon {
+  display: none;
+}
+.card_links > div:hover {
+  cursor: pointer;
+}
+.card_links > div:hover i.right-icon {
+  display: block;
+  font-size: 16px;
+}
+.card_links > div:hover p {
   text-decoration: underline;
   cursor: pointer;
 }
