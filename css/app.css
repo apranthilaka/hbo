@@ -395,7 +395,7 @@ input {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  padding: 16px;
+  padding: 8px 16px;
   border-bottom: 1px solid #cacaca;
   background-color: var(--header-background-color);
   transition: background-color 0.5s ease;
