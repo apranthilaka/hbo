@@ -1,10 +1,12 @@
 .titleComponent {
+    background-color: #ffffff;
     padding: 16px 24px;
-    border-bottom: 1px solid rgb(214, 214, 214);
+    // border-bottom: 1px solid rgb(214, 214, 214);
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
     h4 {
         margin: 0;
@@ -31,5 +33,53 @@
 
 
 
+    }
+}
+
+.indicator {
+    --value-bg-color: gray;
+    --value-text-color: #ffffff;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 0 16px;
+    padding-right: 4px;
+    border-radius: 4px;
+    gap: 16px;
+    font-size: 14px;
+
+    p {
+        margin: 0;
+        color: rgb(114, 106, 106);
+    }
+
+    &__value {
+        padding: 2px 8px;
+        background-color: var(--value-bg-color);
+        color: var(--value-text-color);
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    &--green {
+        --value-bg-color: hsla(104, 50%, 85%, 1);
+        --value-text-color: hsla(104, 50%, 25%, 1);
+    }
+
+    &--red {
+        --value-bg-color: hsla(0, 70%, 85%, 1);
+        --value-text-color: hsla(0, 70%, 25%, 1);
+    }
+
+    &--yellow {
+        --value-bg-color: hsla(45, 100%, 85%, 1);
+        --value-text-color: hsla(45, 100%, 25%, 1);
+    }
+
+    &--gray {
+        --value-bg-color: gray;
+        --value-text-color: #ffffff;
     }
 }

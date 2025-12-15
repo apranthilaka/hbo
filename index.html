@@ -94,11 +94,35 @@
                     <div class="titleComponent">
                         <div class="titleComponent__left">
                             <i class="ph-fill ph-squares-four"></i>
-
                             <h4>Dashboard</h4>
                         </div>
                         <div class="titleComponent__right">
-                            <button class="primaryButton">Create User</button>
+                            <div class="indicator indicator--green">
+                                <div>
+                                    <p>Background Jobs</p>
+                                </div>
+                                <div class="indicator__value">ON</div>
+                            </div>
+
+                            <div class="indicator indicator--red">
+                                <div>
+                                    <p>Background Jobs</p>
+                                </div>
+                                <div class="indicator__value">ON</div>
+                            </div>
+
+                            <div class="indicator indicator--yellow">
+                                <div>
+                                    <p>Background Jobs</p>
+                                </div>
+                                <div class="indicator__value">ON</div>
+                            </div>
+                            <div class="indicator indicator--gray">
+                                <div>
+                                    <p>Background Jobs</p>
+                                </div>
+                                <div class="indicator__value">ON</div>
+                            </div>
                         </div>
                     </div>
                     <div class="cardsTitle">
@@ -107,20 +131,13 @@
                         </div>
                         <div>
                             <div class="cardsTitle_right">
-                                <input
-                                    type="text"
-                                    name="text"
-                                    placeholder="Text"
-                                    aria-label="Text"
-                                />
-
                                 <select
                                     name="favorite-cuisine"
                                     aria-label="Select your favorite cuisine..."
                                     required
                                 >
                                     <option selected disabled value="">
-                                        Select your favorite cuisine...
+                                        All (Entities + Master Entities)
                                     </option>
                                     <option>Italian</option>
                                     <option>Japanese</option>
@@ -128,6 +145,13 @@
                                     <option>Thai</option>
                                     <option>French</option>
                                 </select>
+
+                                <input
+                                    type="search"
+                                    name="search"
+                                    placeholder="Search"
+                                    aria-label="Search"
+                                />
 
                                 <button class="primaryButton">
                                     Add Entity
