@@ -64,10 +64,9 @@
   --icon-border-color: #F1DC8E;
   --icon-background-color: #FBF5DF;
 
-  :hover {
+  &:hover {
     --header-background-color: #FBF5DF;
     --header-border-color: #FBF5DF;
-
   }
 }
 
@@ -75,7 +74,7 @@
   --icon-border-color: #85F09C;
   --icon-background-color: #DFFBE5;
 
-  :hover {
+  &:hover {
     --header-background-color: #DFFBE5;
     --header-border-color: #DFFBE5;
   }

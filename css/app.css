@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
   --icon-border-color: #F1DC8E;
   --icon-background-color: #FBF5DF;
 }
-.card--gp :hover {
+.card--gp:hover {
   --header-background-color: #FBF5DF;
   --header-border-color: #FBF5DF;
 }
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   --icon-border-color: #85F09C;
   --icon-background-color: #DFFBE5;
 }
-.card--lp :hover {
+.card--lp:hover {
   --header-background-color: #DFFBE5;
   --header-border-color: #DFFBE5;
 }
