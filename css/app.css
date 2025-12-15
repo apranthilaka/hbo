@@ -288,6 +288,7 @@ input {
 .indicator p {
   margin: 0;
   color: rgb(114, 106, 106);
+  font-size: 13px;
 }
 .indicator__value {
   padding: 2px 8px;
@@ -314,7 +315,7 @@ input {
 }
 
 .cardsTitle {
-  padding: 16px 24px 0;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,6 +356,7 @@ input {
   grid-template-rows: min-content;
   gap: 16px;
   padding: 16px;
+  padding-top: 0;
   /* make the scrollbar visible and easy to notice across browsers */
   position: relative;
   scrollbar-width: thin;
@@ -417,18 +419,20 @@ input {
 }
 .card_links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
   grid-template-rows: auto;
   padding: 16px;
+  gap: 1px;
 }
 .card_links div {
   height: 40px;
-  border: 1px solid rgb(224, 224, 224);
+  outline: 1px solid rgb(224, 224, 224);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   padding: 0 16px;
+  color: gray;
 }
 
 .card--gp {
