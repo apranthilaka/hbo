@@ -1,10 +1,12 @@
-.leftMenu {
+#left-menu {
     // border-right: 1px solid rgb(214, 214, 214);
     grid-column: 1/2;
     grid-row: 1/3;
     height: 100%;
     background-color: hsla(158, 23%, 91%, 1);
 }
+
+.leftMenu {}
 
 .logo {
     height: 64px;
