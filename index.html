@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Holtara Back Office</title>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <link
             rel="stylesheet"
             type="text/css"
@@ -26,8 +29,95 @@
     </head>
     <body>
         <div class="layout">
-            <div id="top-menu"></div>
-            <div id="left-menu"></div>
+            <div id="top-menu-root"></div>
+            <div id="left-menu-root"></div>
+            <!-- <div class="topMenu">
+                <div class="left">
+                    <div>
+                        <div class="system-status">
+                            <div class="system-status__circle"></div>
+                            <div>Dev Server</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <select
+                            name="favorite-cuisine"
+                            aria-label="Select your favorite cuisine..."
+                            required
+                        >
+                            <option selected disabled value="">History</option>
+                            <option>Italian</option>
+                            <option>Japanese</option>
+                            <option>Indian</option>
+                            <option>Thai</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select
+                            name="favorite-cuisine"
+                            aria-label="Select your favorite cuisine..."
+                            required
+                        >
+                            <option selected disabled value="">
+                                IQ System
+                            </option>
+                            <option>Italian</option>
+                            <option>Japanese</option>
+                            <option>Indian</option>
+                            <option>Thai</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                    </div>
+                    <div class="right__cfa">
+                        <a href="https://holtara.io/" target="_blank">
+                            <img src="images/globe.gif" alt="" />
+                            <i class="ph-fill ph-globe-hemisphere-west"></i>
+                        </a>
+                    </div>
+                    <div class="user-details">
+                        <p>Aravinda Prabath</p>
+                        <div class="user-details__avatar">
+                            <img src="images/profile.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="left-menu">
+                <div class="logo">
+                    <img src="images/Holtara Logo.svg" alt="" />
+                    <i class="ph ph-x"></i>
+                </div>
+                <div class="menu-items">
+                    <ul>
+                        <li class="li current">
+                            <i class="ph ph-house"></i
+                            ><a href="../index.html">Gome</a>
+                        </li>
+                        <li class="li current">
+                            <i class="ph ph-house"></i
+                            ><a href="../dashboard.html">Dashboard</a>
+                        </li>
+
+                        <li><i class="ph ph-house"></i>Assignment</li>
+                        <li><i class="ph ph-house"></i>System admin</li>
+                        <li><i class="ph ph-house"></i>Data</li>
+                        <li><i class="ph ph-house"></i>System admin</li>
+                        <li><i class="ph ph-house"></i>Navigations</li>
+                    </ul>
+                </div>
+            </div> -->
 
             <div class="appContainer">
                 <div>
@@ -515,12 +605,6 @@
 
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script src="/hbo/js/include.js"></script>
-        <script src="/hbo/js/layout.js"></script>
-
-        <!-- <script>
-            loadComponent('#left-menu', '/components/left-menu.html');
-            loadComponent('#top-menu', '/components/top-menu.html');
-        </script> -->
+        <script type="text/babel" src="components/components.js"></script>
     </body>
 </html>
