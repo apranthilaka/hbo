@@ -80,7 +80,7 @@ const LeftMenu = () => {
                 <ul>
                     <li class="li current">
                         <i class="ph ph-house"></i>
-                        <a href="../index.html">Gome</a>
+                        <a href="../index.html">Site Map</a>
                     </li>
                     <li class="li">
                         <i class="ph ph-house"></i>
