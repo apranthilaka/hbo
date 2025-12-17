@@ -1,6 +1,6 @@
 const ChatMessage = () => {
     return (
-        <div>
+        <>
             <div class="titleComponent">
                 <div class="titleComponent__left">
                     <i class="ph-fill ph-squares-four"></i>
@@ -741,8 +741,80 @@ const ChatMessage = () => {
                         </div>
                     </div>
                 </div>
+
+                <div class="card card--lp">
+                    <div class="card_heading">
+                        <div class="card_icon">GP</div>
+                        <h6>Card Title</h6>
+                    </div>
+                    <div class="card_links">
+                        <div>
+                            <p>Details</p>
+                        </div>
+                        <div>
+                            <p>Mapped Entities</p>
+                        </div>
+                        <div>
+                            <p>Users</p>
+                        </div>
+                        <div>
+                            <p>Data Requests</p>
+                        </div>
+                        <div>
+                            <p>Add to My Entities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card--lp">
+                    <div class="card_heading">
+                        <div class="card_icon">GP</div>
+                        <h6>Card Title</h6>
+                    </div>
+                    <div class="card_links">
+                        <div>
+                            <p>Details</p>
+                        </div>
+                        <div>
+                            <p>Mapped Entities</p>
+                        </div>
+                        <div>
+                            <p>Users</p>
+                        </div>
+                        <div>
+                            <p>Data Requests</p>
+                        </div>
+                        <div>
+                            <p>Add to My Entities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card--lp">
+                    <div class="card_heading">
+                        <div class="card_icon">GP</div>
+                        <h6>Card Title</h6>
+                    </div>
+                    <div class="card_links">
+                        <div>
+                            <p>Details</p>
+                        </div>
+                        <div>
+                            <p>Mapped Entities</p>
+                        </div>
+                        <div>
+                            <p>Users</p>
+                        </div>
+                        <div>
+                            <p>Data Requests</p>
+                        </div>
+                        <div>
+                            <p>Add to My Entities</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
