@@ -1,4 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('#top-menu', '/components/top-menu.html');
-    loadComponent('#left-menu', '/components/left-menu.html');
+    loadComponent('#top-menu', '${hbo}/components/top-menu.html');
+    loadComponent('#left-menu', '${hbo}/components/left-menu.html');
 });
