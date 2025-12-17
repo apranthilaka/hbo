@@ -82,7 +82,7 @@ const LeftMenu = () => {
                         <i class="ph ph-house"></i>
                         <a href="../index.html">Gome</a>
                     </li>
-                    <li class="li current">
+                    <li class="li">
                         <i class="ph ph-house"></i>
                         <a href="../dashboard.html">Dashboard</a>
                     </li>
