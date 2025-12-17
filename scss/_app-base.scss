@@ -73,7 +73,7 @@ h4 {
     font-size: 22.4px;
     font-weight: 500;
     letter-spacing: -0.448px;
-    color: #2d3347 ;
+    color: #2d3347;
 }
 
 h5 {
@@ -104,8 +104,12 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: black;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 a:hover {
@@ -151,6 +155,3 @@ li {
     color: #5a5d70;
 
 }
-
-
-
