@@ -70,12 +70,6 @@ const TopMenu = () => {
 };
 
 const LeftMenu = () => {
-    const selectActiveMenuItem = (event) => {
-        document
-            .querySelectorAll('.menu-items li')
-            .forEach((li) => li.classList.remove('liactive'));
-        event.currentTarget.classList.add('liactive');
-    };
     return (
         <div className="left-menu">
             <div class="logo">
@@ -84,28 +78,28 @@ const LeftMenu = () => {
             </div>
             <div class="menu-items">
                 <ul>
-                    <li class="li liactive" onClick={selectActiveMenuItem}>
+                    <li class="li liactive">
                         <i class="ph ph-house"></i>
                         <a href="index.html">Site Map</a>
                     </li>
-                    <li class="li" onClick={selectActiveMenuItem}>
+                    <li class="li">
                         <i class="ph ph-house"></i>
                         <a href="dashboard.html">Dashboard</a>
                     </li>
 
-                    <li onClick={selectActiveMenuItem}>
+                    <li>
                         <i class="ph ph-house"></i>Assignment
                     </li>
-                    <li onClick={selectActiveMenuItem}>
+                    <li>
                         <i class="ph ph-house"></i>System admin
                     </li>
-                    <li onClick={selectActiveMenuItem}>
+                    <li>
                         <i class="ph ph-house"></i>Data
                     </li>
-                    <li onClick={selectActiveMenuItem}>
+                    <li>
                         <i class="ph ph-house"></i>System admin
                     </li>
-                    <li onClick={selectActiveMenuItem}>
+                    <li>
                         <i class="ph ph-house"></i>Navigations
                     </li>
                 </ul>
