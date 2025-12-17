@@ -1,9 +1,10 @@
 async function loadComponent(selector, url) {
-    const res = await fetch(url);
-    if (!res.ok) {
-        console.error(`Failed to load ${url}`);
-        return;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(res.status);
+        const html = await res.text();
+        document.querySelector(selector).innerHTML = html;
+    } catch (err) {
+        console.error(`Component load failed: ${url}`, err);
     }
-    const html = await res.text();
-    document.querySelector(selector).innerHTML = html;
 }
